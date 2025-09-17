@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SYNC - 多様なカルチャーがシンクロする実験的空間</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#00ff88',secondary:'#ff0080'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body { font-family: 'Inter', sans-serif; }
+.hero-bg {
+background-image: url('https://readdy.ai/api/search-image?query=futuristic%20nightclub%20interior%20with%20neon%20lights%2C%20experimental%20art%20installations%2C%20diverse%20crowd%20dancing%2C%20modern%20minimalist%20design%2C%20dark%20atmosphere%20with%20colorful%20lighting%20effects%2C%20high-tech%20sound%20system%2C%20contemporary%20art%20pieces%2C%20vibrant%20energy&width=1920&height=1080&seq=hero-bg&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.gradient-overlay {
+background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+}
+.neon-glow {
+box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+.card-hover {
+transition: all 0.3s ease;
+}
+.card-hover:hover {
+transform: translateY(-8px);
+box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+}
+</style>
+</head>
+<body class="bg-gray-900 text-white">
+<header class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+<nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+<div class="font-['Pacifico'] text-2xl text-primary">SYNC</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#" class="text-white hover:text-primary transition-colors">Home</a>
+<a href="https://readdy.ai/home/ec5bd81d-b24b-4ce7-a571-821a3e1e3481/79b3fb2e-b105-47ce-8c0d-40e491e0aea5" data-readdy="true" class="text-gray-300 hover:text-primary transition-colors">Schedule</a>
+<a href="#" class="text-gray-300 hover:text-primary transition-colors">Menu</a>
+<a href="#" class="text-gray-300 hover:text-primary transition-colors">Access</a>
+<a href="#" class="text-gray-300 hover:text-primary transition-colors">Contact</a>
+</div>
+<button class="md:hidden w-8 h-8 flex items-center justify-center" id="mobile-menu-btn">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</nav>
+<div class="md:hidden hidden bg-gray-800 border-t border-gray-700" id="mobile-menu">
+<div class="px-6 py-4 space-y-4">
+<a href="#" class="block text-white hover:text-primary transition-colors">Home</a>
+<a href="#" class="block text-gray-300 hover:text-primary transition-colors">Schedule</a>
+<a href="#" class="block text-gray-300 hover:text-primary transition-colors">Menu</a>
+<a href="#" class="block text-gray-300 hover:text-primary transition-colors">Access</a>
+<a href="#" class="block text-gray-300 hover:text-primary transition-colors">Contact</a>
+</div>
+</div>
+</header>
+<section class="hero-bg min-h-screen flex items-center relative">
+<div class="gradient-overlay absolute inset-0"></div>
+<div class="relative z-10 w-full px-6">
+<div class="max-w-7xl mx-auto">
+<div class="max-w-2xl">
+<h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+多様な<br>
+<span class="text-primary">カルチャー</span>が<br>
+シンクロする空間
+</h1>
+<p class="text-xl text-gray-300 mb-8 leading-relaxed">
+音楽、アート、ファッション、テクノロジーが絶えず混ざり合い、新しい「何か」が生まれる実験的な場所。訪れるたびに異なる発見と刺激を体験してください。
+</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button id="weekly-events-btn" class="bg-primary text-gray-900 px-8 py-4 !rounded-button font-semibold hover:bg-primary/90 transition-colors neon-glow whitespace-nowrap">
+今週のイベント
+</button>
+<button class="border border-primary text-primary px-8 py-4 !rounded-button font-semibold hover:bg-primary hover:text-gray-900 transition-colors whitespace-nowrap">
+詳細を見る
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="weekly-events" class="py-20 px-6 bg-gray-800">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4">今週のイベント</h2>
+<p class="text-gray-400 text-lg">実験的な音楽とアートが融合する特別な夜</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-gray-900 rounded-xl overflow-hidden card-hover">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=electronic%20music%20DJ%20performance%20with%20neon%20lighting%20effects%2C%20futuristic%20stage%20design%2C%20crowd%20dancing%2C%20experimental%20visual%20art%20projections%2C%20modern%20nightclub%20atmosphere%2C%20vibrant%20colors&width=400&height=300&seq=event1&orientation=landscape')"></div>
+<div class="p-6">
+<div class="text-primary text-sm font-semibold mb-2">12月 15日 (金)</div>
+<h3 class="text-xl font-bold mb-3">ELECTRONIC FUSION</h3>
+<p class="text-gray-400 mb-4">最先端のエレクトロニックミュージックと視覚アートが融合する実験的なナイト。国内外のアーティストが集結。</p>
+<button class="text-primary hover:text-primary/80 transition-colors font-semibold">
+詳細を見る <i class="ri-arrow-right-line ml-1"></i>
+</button>
+</div>
+</div>
+<div class="bg-gray-900 rounded-xl overflow-hidden card-hover">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=fashion%20show%20in%20nightclub%20setting%2C%20models%20wearing%20avant-garde%20clothing%2C%20artistic%20lighting%2C%20contemporary%20fashion%20design%2C%20experimental%20runway%2C%20creative%20atmosphere&width=400&height=300&seq=event2&orientation=landscape')"></div>
+<div class="p-6">
+<div class="text-secondary text-sm font-semibold mb-2">12月 16日 (土)</div>
+<h3 class="text-xl font-bold mb-3">FASHION NIGHT</h3>
+<p class="text-gray-400 mb-4">ファッションとクラブカルチャーが交差する特別な夜。新進デザイナーによるランウェイショーを開催。</p>
+<button class="text-primary hover:text-primary/80 transition-colors font-semibold">
+詳細を見る <i class="ri-arrow-right-line ml-1"></i>
+</button>
+</div>
+</div>
+<div class="bg-gray-900 rounded-xl overflow-hidden card-hover">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=interactive%20art%20installation%20in%20nightclub%2C%20digital%20art%20projections%2C%20people%20interacting%20with%20technology%2C%20immersive%20experience%2C%20futuristic%20art%20display%2C%20colorful%20lighting&width=400&height=300&seq=event3&orientation=landscape')"></div>
+<div class="p-6">
+<div class="text-primary text-sm font-semibold mb-2">12月 17日 (日)</div>
+<h3 class="text-xl font-bold mb-3">TECH ART LAB</h3>
+<p class="text-gray-400 mb-4">テクノロジーとアートの境界を探る実験的なイベント。インタラクティブなアート体験をお楽しみください。</p>
+<button class="text-primary hover:text-primary/80 transition-colors font-semibold">
+詳細を見る <i class="ri-arrow-right-line ml-1"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-6 bg-gray-900">
+<div class="max-w-7xl mx-auto">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="h-96 bg-cover bg-center rounded-xl" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20nightclub%20interior%20design%20with%20experimental%20art%20installations%2C%20diverse%20crowd%20enjoying%20music%2C%20contemporary%20architecture%2C%20neon%20accent%20lighting%2C%20creative%20space%20design%2C%20cultural%20fusion%20atmosphere&width=600&height=400&seq=club-interior&orientation=landscape')"></div>
+<div>
+<h2 class="text-4xl font-bold mb-6">実験的な空間での<br>新たな発見</h2>
+<p class="text-gray-300 text-lg mb-6 leading-relaxed">
+SYNC は単なるナイトクラブではありません。音楽、アート、ファッション、テクノロジーといった異なる要素が絶えず混ざり合い、新しい「何か」が生まれる実験的な空間です。
+</p>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-music-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1">多様な音楽体験</h4>
+<p class="text-gray-400">エレクトロニックからジャズまで、ジャンルを超えた音楽が交差</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-palette-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1">アートとの融合</h4>
+<p class="text-gray-400">現代アーティストとのコラボレーションによる空間演出</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-group-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold mb-1">コミュニティ形成</h4>
+<p class="text-gray-400">新たな発見を求める人々が集まる特別なコミュニティ</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-6 bg-gray-800">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4">ニュース & トピックス</h2>
+<p class="text-gray-400 text-lg">最新のイベント情報とアーティスト紹介</p>
+</div>
+<div class="flex gap-6 overflow-x-auto pb-4">
+<div class="min-w-80 bg-gray-900 rounded-xl overflow-hidden card-hover">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=famous%20international%20DJ%20performing%20at%20nightclub%2C%20professional%20stage%20lighting%2C%20crowd%20cheering%2C%20electronic%20music%20event%2C%20modern%20sound%20system%2C%20energetic%20atmosphere&width=320&height=200&seq=news1&orientation=landscape')"></div>
+<div class="p-6">
+<div class="text-primary text-sm font-semibold mb-2">ニュース</div>
+<h3 class="text-lg font-bold mb-2">世界的 DJ マーティン・ガリックス来日決定</h3>
+<p class="text-gray-400 text-sm">2024年1月に特別公演を開催予定</p>
+</div>
+</div>
+<div class="min-w-80 bg-gray-900 rounded-xl overflow-hidden card-hover">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=art%20gallery%20exhibition%20in%20nightclub%20space%2C%20contemporary%20art%20pieces%2C%20modern%20gallery%20lighting%2C%20visitors%20viewing%20artwork%2C%20cultural%20event%20atmosphere&width=320&height=200&seq=news2&orientation=landscape')"></div>
+<div class="p-6">
+<div class="text-secondary text-sm font-semibold mb-2">イベント</div>
+<h3 class="text-lg font-bold mb-2">現代アート展「DIGITAL DREAMS」開催</h3>
+<p class="text-gray-400 text-sm">デジタルアートの最前線を体験</p>
+</div>
+</div>
+<div class="min-w-80 bg-gray-900 rounded-xl overflow-hidden card-hover">
+<div class="h-48 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=fashion%20collaboration%20event%2C%20designers%20working%20together%2C%20creative%20workshop%20atmosphere%2C%20fashion%20sketches%20and%20materials%2C%20artistic%20collaboration&width=320&height=200&seq=news3&orientation=landscape')"></div>
+<div class="p-6">
+<div class="text-primary text-sm font-semibold mb-2">コラボ</div>
+<h3 class="text-lg font-bold mb-2">新進ファッションブランドとのコラボ企画</h3>
+<p class="text-gray-400 text-sm">限定アイテムの先行販売も実施</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-6 bg-gray-900">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4">Instagram</h2>
+<p class="text-gray-400 text-lg">クラブの雰囲気とイベントの様子をチェック</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square bg-cover bg-center rounded-lg card-hover" style="background-image: url('https://readdy.ai/api/search-image?query=nightclub%20party%20atmosphere%2C%20people%20dancing%2C%20colorful%20lighting%20effects%2C%20DJ%20booth%20in%20background%2C%20energetic%20crowd%2C%20modern%20club%20interior&width=300&height=300&seq=insta1&orientation=squarish')"></div>
+<div class="aspect-square bg-cover bg-center rounded-lg card-hover" style="background-image: url('https://readdy.ai/api/search-image?query=cocktail%20bar%20in%20nightclub%2C%20professional%20bartender%20making%20drinks%2C%20neon%20lighting%2C%20premium%20alcohol%20bottles%2C%20modern%20bar%20design&width=300&height=300&seq=insta2&orientation=squarish')"></div>
+<div class="aspect-square bg-cover bg-center rounded-lg card-hover" style="background-image: url('https://readdy.ai/api/search-image?query=art%20installation%20in%20nightclub%2C%20interactive%20digital%20art%2C%20people%20engaging%20with%20technology%2C%20futuristic%20art%20display%2C%20colorful%20projections&width=300&height=300&seq=insta3&orientation=squarish')"></div>
+<div class="aspect-square bg-cover bg-center rounded-lg card-hover" style="background-image: url('https://readdy.ai/api/search-image?query=fashion%20event%20in%20nightclub%2C%20models%20on%20runway%2C%20avant-garde%20clothing%2C%20artistic%20lighting%2C%20creative%20fashion%20show%20atmosphere&width=300&height=300&seq=insta4&orientation=squarish')"></div>
+<div class="aspect-square bg-cover bg-center rounded-lg card-hover" style="background-image: url('https://readdy.ai/api/search-image?query=live%20music%20performance%20in%20nightclub%2C%20band%20on%20stage%2C%20concert%20lighting%2C%20audience%20enjoying%20music%2C%20modern%20venue%20interior&width=300&height=300&seq=insta5&orientation=squarish')"></div>
+<div class="aspect-square bg-cover bg-center rounded-lg card-hover" style="background-image: url('https://readdy.ai/api/search-image?query=VIP%20area%20in%20nightclub%2C%20luxury%20seating%2C%20premium%20service%2C%20elegant%20interior%20design%2C%20sophisticated%20atmosphere&width=300&height=300&seq=insta6&orientation=squarish')"></div>
+<div class="aspect-square bg-cover bg-center rounded-lg card-hover" style="background-image: url('https://readdy.ai/api/search-image?query=DJ%20mixing%20music%2C%20professional%20DJ%20equipment%2C%20turntables%20and%20mixer%2C%20focused%20DJ%20performance%2C%20club%20lighting%20effects&width=300&height=300&seq=insta7&orientation=squarish')"></div>
+<div class="aspect-square bg-cover bg-center rounded-lg card-hover" style="background-image: url('https://readdy.ai/api/search-image?query=nightclub%20entrance%20with%20modern%20architecture%2C%20neon%20signage%2C%20urban%20nightlife%2C%20contemporary%20building%20design%2C%20welcoming%20atmosphere&width=300&height=300&seq=insta8&orientation=squarish')"></div>
+</div>
+</div>
+</section>
+<footer class="bg-black py-16 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="grid md:grid-cols-4 gap-8 mb-12">
+<div>
+<div class="font-['Pacifico'] text-2xl text-primary mb-4">SYNC</div>
+<p class="text-gray-400 mb-6">多様なカルチャーがシンクロする実験的空間</p>
+<div class="flex gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary hover:text-gray-900 transition-colors cursor-pointer">
+<i class="ri-instagram-line"></i>
+</div>
+<div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary hover:text-gray-900 transition-colors cursor-pointer">
+<i class="ri-twitter-x-line"></i>
+</div>
+<div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary hover:text-gray-900 transition-colors cursor-pointer">
+<i class="ri-facebook-line"></i>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-semibold mb-4">ナビゲーション</h4>
+<div class="space-y-2">
+<a href="#" class="block text-gray-400 hover:text-primary transition-colors">Home</a>
+<a href="https://readdy.ai/home/ec5bd81d-b24b-4ce7-a571-821a3e1e3481/79b3fb2e-b105-47ce-8c0d-40e491e0aea5" data-readdy="true" class="block text-gray-400 hover:text-primary transition-colors">Schedule</a>
+<a href="#" class="block text-gray-400 hover:text-primary transition-colors">Menu</a>
+<a href="#" class="block text-gray-400 hover:text-primary transition-colors">Access</a>
+<a href="#" class="block text-gray-400 hover:text-primary transition-colors">Contact</a>
+</div>
+</div>
+<div>
+<h4 class="font-semibold mb-4">営業時間</h4>
+<div class="space-y-2 text-gray-400">
+<p>金曜日: 21:00 - 05:00</p>
+<p>土曜日: 21:00 - 05:00</p>
+<p>日曜日: 20:00 - 02:00</p>
+<p class="text-sm mt-4">月〜木曜日は貸切営業</p>
+</div>
+</div>
+<div>
+<h4 class="font-semibold mb-4">アクセス</h4>
+<div class="space-y-2 text-gray-400">
+<p>〒150-0043</p>
+<p>東京都渋谷区道玄坂 2-10-12</p>
+<p>新大宗ビル B1F</p>
+<p class="text-sm mt-4">JR 渋谷駅徒歩 5分</p>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+<p>&copy; 2024 SYNC. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuBtn.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+});
+</script>
+<script id="smooth-scroll-script">
+document.addEventListener('DOMContentLoaded', function() {
+const links = document.querySelectorAll('a[href^="#"]');
+const weeklyEventsBtn = document.getElementById('weekly-events-btn');
+const weeklyEventsSection = document.getElementById('weekly-events');
+links.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+weeklyEventsBtn.addEventListener('click', function() {
+weeklyEventsSection.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+});
+});
+</script>
+</body>
+</html>
